@@ -1,3 +1,5 @@
+*.VRClient/Library/PackageCache/com.unity.burst@1.8.11/.Runtime/libburst-llvm-15.dylib filter=lfs diff=lfs merge=lfs -text
+VRClient/Library/PackageCache/com.unity.burst@1.8.11/.Runtime/libburst-llvm-15.dylib filter=lfs diff=lfs merge=lfs -text
 *.dylib filter=lfs diff=lfs merge=lfs -text
 *.7z filter=lfs diff=lfs merge=lfs -text
 <<<<<<< HEAD
