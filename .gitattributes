@@ -7,3 +7,6 @@ ArtifactDB filter=lfs diff=lfs merge=lfs -text
 =======
 Library/* filter=lfs diff=lfs merge=lfs -text
 >>>>>>> 809ecee734d599273a04108d765716644fca84b9
+Library/* filter=lfs diff=lfs merge=lfs -text
+VRClient/Library/* filter=lfs diff=lfs merge=lfs -text
+VRClient/Library/ArtifactDB filter=lfs diff=lfs merge=lfs -text
