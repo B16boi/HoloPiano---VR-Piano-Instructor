@@ -3,56 +3,34 @@ This is the project for Computer Science and Engineering Projects (II), NYCU.
 Title: Real-Time Interactive VR System – Remote Piano Classroom 
 
 ## Authors
-Syuan-Fu Hwang, Yu-Chun Lin, Ting-Yu Chou
+Syuan-Fu Hwang
+Yu-Chun Lin
+Ting-Yu Chou
 
+## Features
+- **Hand Tracking**: Accurate detection of hand positions and movements using Google MediaPipe.
+- **Real-Time Visualization**: Displays and mirrors hand movements in a VR environment.
+- **Interactive Piano Simulation**: Play virtual piano keys that react dynamically to hand movements.
+- **Cross-Platform Integration**: Connects Android devices to VR through a custom server.
+- **Hybrid TCP/UDP Server**: Asynchronous data streaming ensures a responsive experience.
 
-```mermaid
-flowchart LR
-    subgraph RecClient[ ]
-    direction TB
-    A["Recording Client"]
-    end
+## System Architecture
+- **Server**: Listens for connections from the Recording client (Android app) and VR client (VR).
+  - Implements a hybrid TCP/UDP protocol for efficient communication.
+  - Relays hand data from Recording to VR clients asynchronously.
+- **Recording Client (Android App)**: Captures hand movement using MediaPipe and streams data to the server.
+- **VR Client (Unity3D)**: Receives hand data from the server and visualizes it in VR.
+- **Visualization**: Hand data controls a virtual hand in the VR space, allowing interaction with piano keys.
+  
+### Server Workflow
+1. Listens for connections on TCP (port `10001`) from both clients.
+2. Assigns UDP ports dynamically to each client for data transfer.
+3. Relays hand data from the Recording client to the VR client.
 
-    subgraph ServerBox[ ]
-    direction TB
-    B["Server"]
-    end
-
-    subgraph VRClient[ ]
-    direction TB
-    C["VR Client"]
-    end
-
-    A -->|"TCP Connect"| B
-    linkStyle 0 stroke:#007BFF,stroke-width:2px
-    B -->|"TCP Reply UDP Port"| A
-    linkStyle 1 stroke:#FFA500,stroke-width:2px
-    A -->|"UDP Connect"| B
-    linkStyle 2 stroke:grey,stroke-width:2px
-    B -->|"UDP OK"| A
-    linkStyle 3 stroke:#FFA500,stroke-width:2px
-    A -->|"UDP Data"| B
-    linkStyle 4 stroke:grey,stroke-width:2px
-
-    C -->|"TCP Connect"| B
-    linkStyle 5 stroke:#007BFF,stroke-width:2px
-    B -->|"TCP Reply UDP Port"| C
-    linkStyle 6 stroke:#FFA500,stroke-width:2px
-    C -->|"UDP Connect"| B
-    linkStyle 7 stroke:grey,stroke-width:2px
-    B -->|"UDP OK"| C
-    linkStyle 8 stroke:#FFA500,stroke-width:2px
-    B -->|"UDP Data"| C
-    linkStyle 9 stroke:grey,stroke-width:2px
-
-    A:::centered
-    B:::centered
-    C:::centered
-
-    style RecClient fill:#D3D3D3,stroke:#000,stroke-width:1px,height:210px
-    style ServerBox fill:#D3D3D3,stroke:#000,stroke-width:1px,height:210px
-    style VRClient fill:#D3D3D3,stroke:#000,stroke-width:1px,height:210px
-
-    classDef centered fill:none,stroke:none
-    class A,B,C centered
-```
+## Installation & Setup
+```bash
+# Repository Setup
+git clone https://github.com/SFHSammay/HoloPiano---VR-Piano-Instructor.git
+ˋˋˋ
+## Future Improvements
+1. Improve visual environment
