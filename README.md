@@ -40,10 +40,7 @@ flowchart LR
     linkStyle 6 stroke:#FFA500,stroke-width:2px,yOffset:-35
     VRClient -->|"UDP Connect"| ServerBox
     linkStyle 7 stroke:grey,stroke-width:2px,yOffset:0
-    ServerBox -->|"UDP OK"| VRClient
-    linkStyle 8 stroke:#FFA500,stroke-width:2px,yOffset:35
-    ServerBox -->|"UDP Data"| VRClient
-    linkStyle 9 stroke:grey,stroke-width:2px,yOffset:70
+    
 
     A:::centered
     B:::centered
