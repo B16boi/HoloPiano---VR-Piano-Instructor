@@ -7,6 +7,7 @@ Syuan-Fu Hwang, Yu-Chun Lin, Ting-Yu Chou
 
 
 ```mermaid
+flowchart LR
     subgraph RecClient[ ]
     direction TB
     A["Recording Client"]
