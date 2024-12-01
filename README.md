@@ -7,8 +7,20 @@ Syuan-Fu Hwang, Yu-Chun Lin, Ting-Yu Chou
 
 
 ```mermaid
-flowchart TD
-    A[Recording Client] -->|TCP Connect| B
+flowchart LR
+    subgraph GrayBox1[Visualization Layer]
+        C[VR Client]
+    end
+
+    subgraph GrayBox2[Processing Layer]
+        B[Server]
+    end
+
+    subgraph GrayBox3[Input Layer]
+        A[Recording Client]
+    end
+
+    A -->|TCP Connect| B
     linkStyle 0 stroke:#007BFF,stroke-width:2px
     B -->|TCP Reply UDP Port| A
     linkStyle 1 stroke:#FFA500,stroke-width:2px
@@ -19,7 +31,7 @@ flowchart TD
     A -->|UDP Data| B
     linkStyle 4 stroke:grey,stroke-width:2px
 
-    C[VR Client] -->|TCP Connect| B
+    C -->|TCP Connect| B
     linkStyle 5 stroke:#007BFF,stroke-width:2px
     B -->|TCP Reply UDP Port| C
     linkStyle 6 stroke:#FFA500,stroke-width:2px
@@ -30,20 +42,10 @@ flowchart TD
     B -->|UDP Data| C
     linkStyle 9 stroke:grey,stroke-width:2px
 
-    subgraph Input Layer
-        A[Recording Client]
-    end
-
-    subgraph Processing Layer
-        B[Server]
-    end
-
-    subgraph Visualization Layer
-
-        C[VR Client]
-    end
-
-    style A fill:#D3D3D3,stroke:#000,stroke-width:1px
-    style B fill:#D3D3D3,stroke:#000,stroke-width:1px
-    style C fill:#D3D3D3,stroke:#000,stroke-width:1px
+    style GrayBox1 fill:#D3D3D3,stroke:#000,stroke-width:1px
+    style GrayBox2 fill:#D3D3D3,stroke:#000,stroke-width:1px
+    style GrayBox3 fill:#D3D3D3,stroke:#000,stroke-width:1px
+    style A fill:#fff,stroke:#000,stroke-width:1px
+    style B fill:#fff,stroke:#000,stroke-width:1px
+    style C fill:#fff,stroke:#000,stroke-width:1px
 ```
