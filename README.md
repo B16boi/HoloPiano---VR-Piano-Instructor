@@ -23,26 +23,26 @@ flowchart LR
     C["VR Client"]
     end
 
-    RecClient -.->|"TCP Connect"| ServerBox
+    RecClient -->|"TCP Connect"| ServerBox
     linkStyle 0 stroke:#007BFF,stroke-width:2px,yOffset:-70
-    ServerBox -.->|"TCP Reply UDP Port"| RecClient
+    ServerBox -->|"TCP Reply UDP Port"| RecClient
     linkStyle 1 stroke:#FFA500,stroke-width:2px,yOffset:-70
-    RecClient -.->|"UDP Connect"| ServerBox
+    RecClient -->|"UDP Connect"| ServerBox
     linkStyle 2 stroke:grey,stroke-width:2px,yOffset:-35
-    ServerBox -.->|"UDP OK"| RecClient
+    ServerBox -->|"UDP OK"| RecClient
     linkStyle 3 stroke:#FFA500,stroke-width:2px,yOffset:-35
-    RecClient -.->|"UDP Data"| ServerBox
+    RecClient -->|"UDP Data"| ServerBox
     linkStyle 4 stroke:grey,stroke-width:2px,yOffset:35
 
-    VRClient -.->|"TCP Connect"| ServerBox
+    VRClient -->|"TCP Connect"| ServerBox
     linkStyle 5 stroke:#007BFF,stroke-width:2px,yOffset:-70
-    ServerBox -.->|"TCP Reply UDP Port"| VRClient
+    ServerBox -->|"TCP Reply UDP Port"| VRClient
     linkStyle 6 stroke:#FFA500,stroke-width:2px,yOffset:-70
-    VRClient -.->|"UDP Connect"| ServerBox
+    VRClient -->|"UDP Connect"| ServerBox
     linkStyle 7 stroke:grey,stroke-width:2px,yOffset:-35
-    ServerBox -.->|"UDP OK"| VRClient
+    ServerBox -->|"UDP OK"| VRClient
     linkStyle 8 stroke:#FFA500,stroke-width:2px,yOffset:-35
-    ServerBox -.->|"UDP Data"| VRClient
+    ServerBox -->|"UDP Data"| VRClient
     linkStyle 9 stroke:grey,stroke-width:2px,yOffset:35
 
     A:::centered
