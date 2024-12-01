@@ -22,7 +22,7 @@ Ting-Yu Chou
 - **VR Client (Unity3D)**: Receives hand data from the server and visualizes it in VR.
 - **Visualization**: Hand data controls a virtual hand in the VR space, allowing interaction with piano keys.
   
-### Server Workflow
+## Server Workflow
 1. Listens for connections on TCP (port `10001`) from both clients.
 2. Assigns UDP ports dynamically to each client for data transfer.
 3. Relays hand data from the Recording client to the VR client.
@@ -31,6 +31,6 @@ Ting-Yu Chou
 ```bash
 # Repository Setup
 git clone https://github.com/SFHSammay/HoloPiano---VR-Piano-Instructor.git
-ˋˋˋ
+
 ## Future Improvements
 1. Improve visual environment
