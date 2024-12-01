@@ -5,6 +5,8 @@ Title: Real-Time Interactive VR System – Remote Piano Classroom
 ## Authors
 Syuan-Fu Hwang, Yu-Chun Lin, Ting-Yu Chou
 
+
+```mermaid
 flowchart TD
     A[Recording Client] -->|TCP Connect| B
     linkStyle 0 stroke:#007BFF,stroke-width:2px
@@ -37,9 +39,11 @@ flowchart TD
     end
 
     subgraph Visualization Layer
+
         C[VR Client]
     end
 
     style A fill:#D3D3D3,stroke:#000,stroke-width:1px
     style B fill:#D3D3D3,stroke:#000,stroke-width:1px
     style C fill:#D3D3D3,stroke:#000,stroke-width:1px
+```
