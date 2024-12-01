@@ -34,7 +34,7 @@ flowchart LR
     B -->|UDP Data| C
     linkStyle 9 stroke:grey,stroke-width:2px
 
-    style A fill:#D3D3D3,stroke:#000,stroke-width:1px
-    style B fill:#D3D3D3,stroke:#000,stroke-width:1px
-    style C fill:#D3D3D3,stroke:#000,stroke-width:1px
+    style A fill:#D3D3D3,stroke:#000,stroke-width:1px,height:210px
+    style B fill:#D3D3D3,stroke:#000,stroke-width:1px,height:210px
+    style C fill:#D3D3D3,stroke:#000,stroke-width:1px,height:210px
 ```
