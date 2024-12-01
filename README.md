@@ -26,7 +26,7 @@ flowchart LR
     RecClient -->|"TCP Connect"| ServerBox
     linkStyle 0 stroke:#007BFF,stroke-width:2px,yOffset:-140
     ServerBox -->|"TCP Reply UDP Port"| RecClient
-    linkStyle 1 stroke:#FFA500,stroke-width:2px,yOffset:-70
+    linkStyle 1 stroke:#FFA500,stroke-width:2px,yOffset:-140
     RecClient -->|"UDP Connect"| ServerBox
     linkStyle 2 stroke:grey,stroke-width:2px,yOffset:-35
     ServerBox -->|"UDP OK"| RecClient
