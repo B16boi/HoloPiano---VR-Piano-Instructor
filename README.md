@@ -34,3 +34,5 @@ git clone https://github.com/SFHSammay/HoloPiano---VR-Piano-Instructor.git
 
 ```
 
+## Future Improvements
+1. Improve visual environment
