@@ -8,17 +8,9 @@ Syuan-Fu Hwang, Yu-Chun Lin, Ting-Yu Chou
 
 ```mermaid
 flowchart LR
-    subgraph GrayBox1[Visualization Layer]
-        C[VR Client]
-    end
-
-    subgraph GrayBox2[Processing Layer]
-        B[Server]
-    end
-
-    subgraph GrayBox3[Input Layer]
-        A[Recording Client]
-    end
+    A[Recording Client]
+    B[Server]
+    C[VR Client]
 
     A -->|TCP Connect| B
     linkStyle 0 stroke:#007BFF,stroke-width:2px
@@ -42,10 +34,7 @@ flowchart LR
     B -->|UDP Data| C
     linkStyle 9 stroke:grey,stroke-width:2px
 
-    style GrayBox1 fill:#D3D3D3,stroke:#000,stroke-width:1px
-    style GrayBox2 fill:#D3D3D3,stroke:#000,stroke-width:1px
-    style GrayBox3 fill:#D3D3D3,stroke:#000,stroke-width:1px
-    style A fill:#fff,stroke:#000,stroke-width:1px
-    style B fill:#fff,stroke:#000,stroke-width:1px
-    style C fill:#fff,stroke:#000,stroke-width:1px
+    style A fill:#D3D3D3,stroke:#000,stroke-width:1px
+    style B fill:#D3D3D3,stroke:#000,stroke-width:1px
+    style C fill:#D3D3D3,stroke:#000,stroke-width:1px
 ```
