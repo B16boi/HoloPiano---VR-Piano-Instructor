@@ -7,7 +7,6 @@ Syuan-Fu Hwang, Yu-Chun Lin, Ting-Yu Chou
 
 
 ```mermaid
-```mermaid
 flowchart LR
     subgraph RecClient[ ]
     direction TB
