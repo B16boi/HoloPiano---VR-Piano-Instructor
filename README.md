@@ -32,6 +32,3 @@ Ting-Yu Chou
 # Repository Setup
 git clone https://github.com/SFHSammay/HoloPiano---VR-Piano-Instructor.git
 ˋˋˋ
-
-## Future Improvements
-1. Improve visual environment
