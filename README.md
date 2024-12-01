@@ -24,15 +24,15 @@ flowchart LR
     end
 
     RecClient -->|"TCP Connect"| ServerBox
-    linkStyle 0 stroke:#007BFF,stroke-width:2px,yOffset:-140
+    linkStyle 0 stroke:#007BFF,stroke-width:2px
     ServerBox -->|"TCP Reply UDP Port"| RecClient
-    linkStyle 1 stroke:#FFA500,stroke-width:2px,yOffset:-140
+    linkStyle 1 stroke:#FFA500,stroke-width:2px
     RecClient -->|"UDP Connect"| ServerBox
-    linkStyle 2 stroke:grey,stroke-width:2px,yOffset:-35
+    linkStyle 2 stroke:grey,stroke-width:2px
     ServerBox -->|"UDP OK"| RecClient
-    linkStyle 3 stroke:#FFA500,stroke-width:2px,yOffset:-35
+    linkStyle 3 stroke:#FFA500,stroke-width:2px
     RecClient -->|"UDP Data"| ServerBox
-    linkStyle 4 stroke:grey,stroke-width:2px,yOffset:35
+    linkStyle 4 stroke:grey,stroke-width:2px
 
     VRClient -->|"TCP Connect"| ServerBox
     linkStyle 5 stroke:#007BFF,stroke-width:2px,yOffset:-70
