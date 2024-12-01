@@ -24,26 +24,26 @@ flowchart LR
     end
 
     RecClient -->|"TCP Connect"| ServerBox
-    linkStyle 0 stroke:#007BFF,stroke-width:2px
+    linkStyle 0 stroke:#007BFF,stroke-width:2px,yOffset:-70
     ServerBox -->|"TCP Reply UDP Port"| RecClient
-    linkStyle 1 stroke:#FFA500,stroke-width:2px
+    linkStyle 1 stroke:#FFA500,stroke-width:2px,yOffset-35
     RecClient -->|"UDP Connect"| ServerBox
     linkStyle 2 stroke:grey,stroke-width:2px
     ServerBox -->|"UDP OK"| RecClient
-    linkStyle 3 stroke:#FFA500,stroke-width:2px
+    linkStyle 3 stroke:#FFA500,stroke-width:2px,yOffset:35
     RecClient -->|"UDP Data"| ServerBox
-    linkStyle 4 stroke:grey,stroke-width:2px
+    linkStyle 4 stroke:grey,stroke-width:2px,yOffset:70
 
     VRClient -->|"TCP Connect"| ServerBox
     linkStyle 5 stroke:#007BFF,stroke-width:2px,yOffset:-70
     ServerBox -->|"TCP Reply UDP Port"| VRClient
-    linkStyle 6 stroke:#FFA500,stroke-width:2px,yOffset:-70
+    linkStyle 6 stroke:#FFA500,stroke-width:2px,yOffset:-35
     VRClient -->|"UDP Connect"| ServerBox
-    linkStyle 7 stroke:grey,stroke-width:2px,yOffset:-35
+    linkStyle 7 stroke:grey,stroke-width:2px,yOffset:0
     ServerBox -->|"UDP OK"| VRClient
-    linkStyle 8 stroke:#FFA500,stroke-width:2px,yOffset:-35
+    linkStyle 8 stroke:#FFA500,stroke-width:2px,yOffset:35
     ServerBox -->|"UDP Data"| VRClient
-    linkStyle 9 stroke:grey,stroke-width:2px,yOffset:35
+    linkStyle 9 stroke:grey,stroke-width:2px,yOffset:70
 
     A:::centered
     B:::centered
